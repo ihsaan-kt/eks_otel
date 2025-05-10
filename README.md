@@ -2,7 +2,8 @@
 
 ================================================
 
-### `oteltrygen-eks/` implements `telemetrygen` container to mock telemetry data
+## `oteltrygen-eks/` 
+### - implements `telemetrygen` container to mock telemetry data
 
 
 ### - Deployment Terraform:
