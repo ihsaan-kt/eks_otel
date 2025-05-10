@@ -1,0 +1,19 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+      http:
+
+exporters:
+  awsxray:
+  awsemf:
+    namespace: "EKS/telemetrygen"
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      exporters: [awsxray]
+    metrics:
+      receivers: [otlp]
+      exporters: [awsemf]
