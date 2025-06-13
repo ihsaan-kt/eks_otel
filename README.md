@@ -1,7 +1,4 @@
-## tester EKS cluster with Opentelemetry collector
-
-
-## implements `telemetrygen` or `Amazon Distro for Opentelemetry` container to mock telemetry data
+## Thank you for your time and consideration. This project implements `telemetrygen` and `Amazon Distro for Opentelemetry` container to mock telemetry data onto working EKS cluster.
 
 
 ## Deploying Terraform:
