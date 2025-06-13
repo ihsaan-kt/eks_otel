@@ -2,21 +2,18 @@
 
 ================================================
 
-## `oteltrygen-eks/` 
-### - implements `telemetrygen` container to mock telemetry data
+### - implements `telemetrygen` or `Amazon Distro for Opentelemetry` container to mock telemetry data
 
 
 ### - Deployment Terraform:
+```
+cd oteltrygen-eks
+terraform init
+terraform apply -auto-approve
 
-`terraform init`
-`terraform apply -auto-approve`
+aws eks --region <region> update-kubeconfig --name <cluster-name>`\
+```
 
-`aws eks --region <region> update-kubeconfig --name <cluster-name>`
-
-### - Deploy Karpenter (if required):
-`helm repo add karpenter https://charts.karpenter.sh`
-`helm repo update`
-`helm install karpenter karpenter/karpenter -f karpenter/values.yaml`
 
 ### - Deploy ADOT Collector:
 `kubectl apply -f adot/collector-config.yaml`
